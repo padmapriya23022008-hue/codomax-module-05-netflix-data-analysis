@@ -1,81 +1,93 @@
-# Netflix Movies and TV Shows Data Analysis
+# Netflix Movies and TV Shows Analysis & Machine Learning
 
 ## 📌 Project Overview
 
-This project focuses on Exploratory Data Analysis (EDA) of the Netflix Movies and TV Shows dataset using Python. The goal is to understand Netflix's content distribution and identify trends in movies, TV shows, genres, ratings, release years, and countries.
+This project explores Netflix Movies and TV Shows using Python, data visualization, and Machine Learning. It was developed in two stages as part of the Codomax Digital Internship.
+
+- **Module 05:** Exploratory Data Analysis (EDA)
+- **Module 06:** Machine Learning — Netflix content rating prediction
 
 ## 🎯 Objectives
 
-- Analyze the distribution of Movies and TV Shows.
-- Explore content release trends over the years.
-- Identify the most common genres on Netflix.
-- Analyze content ratings.
-- Explore country-wise content distribution.
-- Visualize data to discover meaningful patterns and insights.
+- Analyze Movies and TV Shows on Netflix.
+- Explore release-year trends, genres, ratings, and countries.
+- Clean and prepare the dataset.
+- Build a Random Forest classification model to predict content ratings.
+- Evaluate model performance using accuracy, a classification report, and a confusion matrix.
 
 ## 🛠️ Technologies Used
 
 - Python
-- Pandas
-- NumPy
-- Matplotlib
-- Seaborn
+- Pandas and NumPy
+- Matplotlib and Seaborn
+- Scikit-learn
 - Google Colab
 - GitHub
 
 ## 📂 Dataset
 
-**Dataset:** Netflix Movies and TV Shows
+**Netflix Movies and TV Shows**
 
-**Source:** [Kaggle – Netflix Movies and TV Shows](https://www.kaggle.com/datasets/shivamb/netflix-shows)
+Source: [Kaggle Dataset](https://www.kaggle.com/datasets/shivamb/netflix-shows)
 
-The dataset includes information such as title, content type, director, cast, country, date added, release year, rating, duration, and genre.
+The dataset contains details such as title, type, release year, rating, duration, country, and genres.
 
-## 🔍 Project Workflow
+## 📊 Module 05 — Exploratory Data Analysis
 
-1. Import the required Python libraries.
-2. Load the Netflix dataset into a Pandas DataFrame.
-3. Inspect the dataset structure and identify missing values and duplicate records.
-4. Clean the data by handling missing values and removing duplicate rows.
-5. Perform Exploratory Data Analysis.
-6. Create visualizations using Matplotlib and Seaborn.
-7. Summarize the findings and conclusions.
-
-## 📊 Visualizations
-
-The project includes the following visualizations:
+The analysis includes:
 
 - Movies vs. TV Shows comparison
-- Netflix content released by year
-- Top 10 genres
-- Top 10 content ratings
-- Top 10 countries by number of titles
+- Release-year trends
+- Top genres
+- Content rating distribution
+- Country-wise content analysis
 
-## 💡 Key Learnings
+## 🤖 Module 06 — Machine Learning
 
-- Understanding and cleaning real-world datasets
-- Handling missing values and duplicate records
-- Performing Exploratory Data Analysis
-- Creating charts using Matplotlib and Seaborn
-- Identifying trends and communicating data-driven insights
+A Random Forest classifier was trained to predict content rating using content type, release year, duration, and genre.
 
-## ▶️ How to Run the Project
+### Workflow
 
-1. Download or clone this repository.
+1. Prepare the dataset and select features.
+2. Group rare rating categories to support stratified splitting.
+3. Encode categorical features and scale the numerical feature.
+4. Split the data into training and testing sets.
+5. Train the Random Forest classifier.
+6. Evaluate predictions using accuracy, a classification report, and a confusion matrix.
+7. Test the model with a sample input.
+
+### Initial Model Result
+
+- **Model:** Random Forest Classifier
+- **Test accuracy:** 46.68%
+- **Sample prediction:** TV-MA for a sample movie input
+
+The accuracy is a baseline result, not proof of strong predictive performance. Further improvements and comparison with simpler models may be useful.
+
+## 📁 Project Notebooks
+
+- **Module 05 — EDA:** `Codomax_Module_05_Netflix_Data_Analysis.ipynb`
+- **Module 06 — Machine Learning:** `Codomax_Module_06_Netflix_ML_Project.ipynb`
+
+## ▶️ How to Run
+
+1. Download the required notebook from this repository.
 2. Download `netflix_titles.csv` from the Kaggle dataset linked above.
-3. Open the notebook in Google Colab or Jupyter Notebook.
-4. Upload the CSV file to the notebook environment.
-5. Update the file path if necessary.
-6. Run the notebook cells in order.
+3. Open the notebook in Google Colab.
+4. Upload the CSV file and update its file path if necessary.
+5. Run the cells in order.
 
-## 🔗 Project Notebook
+## 📚 Learning Outcomes
 
-[Open the Google Colab Notebook](https://colab.research.google.com/drive/1FnqCxN2bo3A2soo00euHeSO1orDIeDz6?usp=sharing)
+- Data cleaning and preprocessing
+- Exploratory Data Analysis
+- Data visualization
+- Feature encoding and preprocessing pipelines
+- Classification with Scikit-learn
+- Model evaluation and interpretation
 
 ## 🏁 Conclusion
 
-This project demonstrates how Python-based data analysis and visualization can be used to explore a streaming platform's content catalog. It provides practical experience in data preprocessing, Exploratory Data Analysis, and visual storytelling.
+This project combines exploratory data analysis with a baseline Machine Learning model to investigate Netflix content. It provided hands-on practice in Python, visualization, data preparation, classification, and model evaluation.
 
----
-
-**Project completed as part of Codomax Digital Internship – Module 05: Data Science Mini Project.**
+**Completed as part of the Codomax Digital Internship — Modules 05 and 06.**
